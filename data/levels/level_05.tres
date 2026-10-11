@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_hb14n"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_6rc03"]
+[ext_resource type="Script" path="res://scripts/data/spawn_group.gd" id="3_d0j32"]
+
+[sub_resource type="Resource" id="Resource_0apti"]
+script = ExtResource("3_d0j32")
+enemy_id = "grunt"
+count = 10
+interval = 0.8
+
+[sub_resource type="Resource" id="Resource_5r5cg"]
+script = ExtResource("2_6rc03")
+groups = Array[ExtResource("3_d0j32")]([SubResource("Resource_0apti")])
+
+[sub_resource type="Resource" id="Resource_q3eeg"]
+script = ExtResource("3_d0j32")
+enemy_id = "runner"
+count = 12
+interval = 0.5
+
+[sub_resource type="Resource" id="Resource_c8ufq"]
+script = ExtResource("2_6rc03")
+groups = Array[ExtResource("3_d0j32")]([SubResource("Resource_q3eeg")])
+
+[sub_resource type="Resource" id="Resource_nbnpc"]
+script = ExtResource("3_d0j32")
+enemy_id = "grunt"
+count = 8
+interval = 0.9
+
+[sub_resource type="Resource" id="Resource_qtwck"]
+script = ExtResource("3_d0j32")
+enemy_id = "tank"
+count = 4
+interval = 2.5
+delay = 3.0
+
+[sub_resource type="Resource" id="Resource_aig56"]
+script = ExtResource("2_6rc03")
+groups = Array[ExtResource("3_d0j32")]([SubResource("Resource_nbnpc"), SubResource("Resource_qtwck")])
+
+[sub_resource type="Resource" id="Resource_sfg1t"]
+script = ExtResource("3_d0j32")
+enemy_id = "runner"
+count = 10
+interval = 0.6
+
+[sub_resource type="Resource" id="Resource_wfxhq"]
+script = ExtResource("3_d0j32")
+enemy_id = "tank"
+count = 6
+interval = 2.0
+delay = 5.0
+hp_scale = 1.3
+
+[sub_resource type="Resource" id="Resource_1l242"]
+script = ExtResource("2_6rc03")
+groups = Array[ExtResource("3_d0j32")]([SubResource("Resource_sfg1t"), SubResource("Resource_wfxhq")])
+
+[resource]
+script = ExtResource("1_hb14n")
+id = "level_05"
+display_name = "第 5 关 · 回形迷宫"
+base_health = 20
+starting_gold = 320
+map_id = "map_05"
+allowed_tower_ids = PackedStringArray("arrow_tower")
+waves = Array[ExtResource("2_6rc03")]([SubResource("Resource_5r5cg"), SubResource("Resource_c8ufq"), SubResource("Resource_aig56"), SubResource("Resource_1l242")])

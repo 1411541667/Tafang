@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_6nawd"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_7aiuv"]
+[ext_resource type="Script" path="res://scripts/data/spawn_group.gd" id="3_hij7b"]
+
+[sub_resource type="Resource" id="Resource_ilbil"]
+script = ExtResource("3_hij7b")
+enemy_id = "grunt"
+count = 8
+interval = 0.9
+
+[sub_resource type="Resource" id="Resource_0bqj5"]
+script = ExtResource("2_7aiuv")
+groups = Array[ExtResource("3_hij7b")]([SubResource("Resource_ilbil")])
+
+[sub_resource type="Resource" id="Resource_ba1yj"]
+script = ExtResource("3_hij7b")
+enemy_id = "runner"
+count = 10
+interval = 0.6
+
+[sub_resource type="Resource" id="Resource_etu6v"]
+script = ExtResource("2_7aiuv")
+groups = Array[ExtResource("3_hij7b")]([SubResource("Resource_ba1yj")])
+
+[sub_resource type="Resource" id="Resource_a50vx"]
+script = ExtResource("3_hij7b")
+enemy_id = "grunt"
+count = 6
+
+[sub_resource type="Resource" id="Resource_n7jmt"]
+script = ExtResource("3_hij7b")
+enemy_id = "runner"
+count = 6
+interval = 0.8
+delay = 3.0
+
+[sub_resource type="Resource" id="Resource_kt86t"]
+script = ExtResource("2_7aiuv")
+groups = Array[ExtResource("3_hij7b")]([SubResource("Resource_a50vx"), SubResource("Resource_n7jmt")])
+
+[resource]
+script = ExtResource("1_6nawd")
+id = "level_03"
+display_name = "第 3 关 · 蛇形长路"
+base_health = 15
+starting_gold = 220
+map_id = "map_03"
+allowed_tower_ids = PackedStringArray("arrow_tower")
+waves = Array[ExtResource("2_7aiuv")]([SubResource("Resource_0bqj5"), SubResource("Resource_etu6v"), SubResource("Resource_kt86t")])

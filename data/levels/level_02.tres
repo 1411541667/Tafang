@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_aib7a"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_2lq7d"]
+[ext_resource type="Script" path="res://scripts/data/spawn_group.gd" id="3_fqbei"]
+
+[sub_resource type="Resource" id="Resource_6wkqx"]
+script = ExtResource("3_fqbei")
+enemy_id = "grunt"
+count = 6
+
+[sub_resource type="Resource" id="Resource_xg06x"]
+script = ExtResource("2_2lq7d")
+groups = Array[ExtResource("3_fqbei")]([SubResource("Resource_6wkqx")])
+
+[sub_resource type="Resource" id="Resource_bsgu1"]
+script = ExtResource("3_fqbei")
+enemy_id = "grunt"
+count = 4
+
+[sub_resource type="Resource" id="Resource_ri5om"]
+script = ExtResource("3_fqbei")
+enemy_id = "runner"
+count = 4
+interval = 0.8
+delay = 4.0
+
+[sub_resource type="Resource" id="Resource_pd480"]
+script = ExtResource("2_2lq7d")
+groups = Array[ExtResource("3_fqbei")]([SubResource("Resource_bsgu1"), SubResource("Resource_ri5om")])
+
+[resource]
+script = ExtResource("1_aib7a")
+id = "level_02"
+display_name = "第 2 关 · Z 形折返"
+base_health = 12
+starting_gold = 180
+map_id = "map_02"
+allowed_tower_ids = PackedStringArray("arrow_tower")
+waves = Array[ExtResource("2_2lq7d")]([SubResource("Resource_xg06x"), SubResource("Resource_pd480")])

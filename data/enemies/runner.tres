@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_yyxed"]
+
+[resource]
+script = ExtResource("1_yyxed")
+id = "runner"
+display_name = "疾行"
+max_health = 40.0
+move_speed = 120.0
+attack_range = 36.0
+attack_speed = 1.2
+damage = 4.0
+gold_reward = 8
+body_radius = 13.0
+color = Color(0.9411765, 0.58431375, 0.18431373, 1)

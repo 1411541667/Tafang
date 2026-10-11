@@ -1,0 +1,39 @@
+; Engine configuration file.
+; 塔防 Tower Defense —— 数据驱动关卡框架
+
+config_version=5
+
+[application]
+
+config/name="塔防"
+config/description="经典塔防框架：5 个关卡 + 1 张测试地图，全部共用同一套类与函数。"
+run/main_scene="res://scenes/main_menu.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://scripts/autoload/game_state.gd"
+
+[debug]
+
+gdscript/warnings/inference_on_variant=1
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/NotoSansSC-VF.ttf"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+; 默认清屏色：地图是 20x11 格 x 64px = 1280x704，比 720 高的窗口少 16px。
+; 不设这一项时那条 16px 缝会露出 Godot 默认的灰色 (#4c4c4c)，很难看。
+environment/defaults/default_clear_color=Color(0.059, 0.082, 0.114, 1)

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_55y67"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_6jrhh"]
+[ext_resource type="Script" path="res://scripts/data/spawn_group.gd" id="3_edcfl"]
+
+[sub_resource type="Resource" id="Resource_vjtlv"]
+script = ExtResource("3_edcfl")
+enemy_id = "grunt"
+count = 5
+
+[sub_resource type="Resource" id="Resource_y1woe"]
+script = ExtResource("2_6jrhh")
+groups = Array[ExtResource("3_edcfl")]([SubResource("Resource_vjtlv")])
+
+[resource]
+script = ExtResource("1_55y67")
+id = "level_01"
+display_name = "第 1 关 · 直线走廊"
+map_id = "map_01"
+allowed_tower_ids = PackedStringArray("arrow_tower")
+waves = Array[ExtResource("2_6jrhh")]([SubResource("Resource_y1woe")])

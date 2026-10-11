@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MapData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/map_data.gd" id="1_rcly0"]
+
+[resource]
+script = ExtResource("1_rcly0")
+id = "map_04"
+display_name = "U 形回廊"
+spawn_cell = Vector2i(0, 1)
+goal_cell = Vector2i(19, 1)
+path = Array[Vector2i]([Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3), Vector2i(0, 4), Vector2i(0, 5), Vector2i(0, 6), Vector2i(0, 7), Vector2i(0, 8), Vector2i(0, 9), Vector2i(1, 9), Vector2i(2, 9), Vector2i(3, 9), Vector2i(4, 9), Vector2i(5, 9), Vector2i(6, 9), Vector2i(7, 9), Vector2i(8, 9), Vector2i(9, 9), Vector2i(10, 9), Vector2i(11, 9), Vector2i(12, 9), Vector2i(13, 9), Vector2i(14, 9), Vector2i(15, 9), Vector2i(16, 9), Vector2i(17, 9), Vector2i(18, 9), Vector2i(19, 9), Vector2i(19, 8), Vector2i(19, 7), Vector2i(19, 6), Vector2i(19, 5), Vector2i(19, 4), Vector2i(19, 3), Vector2i(19, 2), Vector2i(19, 1)])
+build_slots = Array[Vector2i]([Vector2i(0, 0), Vector2i(19, 0), Vector2i(1, 1), Vector2i(18, 1), Vector2i(1, 2), Vector2i(18, 2), Vector2i(1, 3), Vector2i(18, 3), Vector2i(1, 4), Vector2i(18, 4), Vector2i(1, 5), Vector2i(18, 5), Vector2i(1, 6), Vector2i(18, 6), Vector2i(1, 7), Vector2i(18, 7), Vector2i(1, 8), Vector2i(2, 8), Vector2i(3, 8), Vector2i(4, 8), Vector2i(5, 8), Vector2i(6, 8), Vector2i(7, 8), Vector2i(8, 8), Vector2i(9, 8), Vector2i(10, 8), Vector2i(11, 8), Vector2i(12, 8), Vector2i(13, 8), Vector2i(14, 8), Vector2i(15, 8), Vector2i(16, 8), Vector2i(17, 8), Vector2i(18, 8), Vector2i(0, 10), Vector2i(1, 10), Vector2i(2, 10), Vector2i(3, 10), Vector2i(4, 10), Vector2i(5, 10), Vector2i(6, 10), Vector2i(7, 10), Vector2i(8, 10), Vector2i(9, 10), Vector2i(10, 10), Vector2i(11, 10), Vector2i(12, 10), Vector2i(13, 10), Vector2i(14, 10), Vector2i(15, 10), Vector2i(16, 10), Vector2i(17, 10), Vector2i(18, 10), Vector2i(19, 10)])

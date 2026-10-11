@@ -1,0 +1,9 @@
+# Godot 自动生成的导入缓存，绝不提交
+.godot/
+
+# 截图 / 测试产物
+output/
+*.log
+
+# 导出配置属于个人环境
+export_presets.cfg

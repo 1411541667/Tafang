@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_wrwnl"]
+
+[resource]
+script = ExtResource("1_wrwnl")
+id = "tank"
+display_name = "重甲"
+max_health = 220.0
+move_speed = 45.0
+physical_resist = 0.5
+attack_range = 48.0
+attack_speed = 0.7
+damage = 12.0
+gold_reward = 25
+body_radius = 20.0
+color = Color(0.63529414, 0.34901962, 0.84705883, 1)

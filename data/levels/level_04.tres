@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="LevelData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="1_ic28n"]
+[ext_resource type="Script" path="res://scripts/data/wave_data.gd" id="2_jgec1"]
+[ext_resource type="Script" path="res://scripts/data/spawn_group.gd" id="3_om1gp"]
+
+[sub_resource type="Resource" id="Resource_nfk8x"]
+script = ExtResource("3_om1gp")
+enemy_id = "grunt"
+count = 8
+interval = 0.9
+
+[sub_resource type="Resource" id="Resource_e3sg4"]
+script = ExtResource("2_jgec1")
+groups = Array[ExtResource("3_om1gp")]([SubResource("Resource_nfk8x")])
+
+[sub_resource type="Resource" id="Resource_fopq4"]
+script = ExtResource("3_om1gp")
+enemy_id = "grunt"
+count = 6
+
+[sub_resource type="Resource" id="Resource_v0rku"]
+script = ExtResource("3_om1gp")
+enemy_id = "tank"
+count = 2
+interval = 3.0
+delay = 2.0
+
+[sub_resource type="Resource" id="Resource_mgs8d"]
+script = ExtResource("2_jgec1")
+groups = Array[ExtResource("3_om1gp")]([SubResource("Resource_fopq4"), SubResource("Resource_v0rku")])
+
+[sub_resource type="Resource" id="Resource_uhysw"]
+script = ExtResource("3_om1gp")
+enemy_id = "runner"
+count = 8
+interval = 0.7
+
+[sub_resource type="Resource" id="Resource_nhqtn"]
+script = ExtResource("3_om1gp")
+enemy_id = "tank"
+count = 3
+interval = 2.5
+delay = 4.0
+
+[sub_resource type="Resource" id="Resource_0pplu"]
+script = ExtResource("2_jgec1")
+groups = Array[ExtResource("3_om1gp")]([SubResource("Resource_uhysw"), SubResource("Resource_nhqtn")])
+
+[resource]
+script = ExtResource("1_ic28n")
+id = "level_04"
+display_name = "第 4 关 · U 形回廊"
+base_health = 18
+starting_gold = 260
+map_id = "map_04"
+allowed_tower_ids = PackedStringArray("arrow_tower")
+waves = Array[ExtResource("2_jgec1")]([SubResource("Resource_e3sg4"), SubResource("Resource_mgs8d"), SubResource("Resource_0pplu")])
